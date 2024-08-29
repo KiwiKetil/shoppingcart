@@ -17,7 +17,7 @@ internal class ShoppingCart
 {
     private readonly ShoppingCartId _shoppingCartId;
     private List<Item> _items = [];
-    private readonly object _lock = new(); // implement?  // lock list vs lock object?
+    private readonly object _lock = new();
 
     public ShoppingCart()
     {
