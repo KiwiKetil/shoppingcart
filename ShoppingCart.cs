@@ -34,8 +34,7 @@ internal class ShoppingCart
             {
                 return _items;
             }
-        }
-     
+        }     
     }
 
     public decimal TotalPrice
