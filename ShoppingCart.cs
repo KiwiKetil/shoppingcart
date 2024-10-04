@@ -32,7 +32,7 @@ internal class ShoppingCart
         {
             lock (_lock) 
             {
-                return _items;
+                return new List<Item>(_items);
             }
         }     
     }
@@ -61,7 +61,7 @@ internal class ShoppingCart
             }
             else
             {
-                Items.Add(item);
+                _items.Add(item);
                 item.QuantityInStock--;
             }
         }
@@ -106,7 +106,7 @@ internal class ShoppingCart
         lock (_lock)
         {
             Console.WriteLine("\nCart contents:");
-            foreach (var item in Items)
+            foreach (var item in _items)
             {
                 Console.WriteLine(item);
             }
